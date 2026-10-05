@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5f9;
+    color: #172033;
+    min-height: 100vh;
+}
+
+header {
+    background: #182848;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+header p {
+    opacity: 0.9;
+}
+
+main {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 20px;
+}
+
+.tela {
+    display: none;
+}
+
+.tela.ativa {
+    display: block;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.cards button {
+    background: white;
+    border: none;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.2s;
+}
+
+.cards button:hover {
+    transform: translateY(-4px);
+}
+
+.cards button:first-line {
+    font-size: 30px;
+}
+
+.cards strong {
+    display: block;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.cards span {
+    color: #64748b;
+}
+
+.info {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}
+
+.voltar {
+    border: none;
+    background: #182848;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 25px;
+}
+
+.mensagem {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.link-falso {
+    color: #d62828;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.botoes {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.botoes button,
+.alternativa {
+    border: none;
+    padding: 14px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #182848;
+    color: white;
+    font-size: 16px;
+}
+
+#resultadoSuspeita,
+#resultadoQuiz {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#pergunta {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    margin: 20px 0;
+}
+
+.alternativa {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #182848;
+    color: white;
+    margin-top: 30px;
+}
+
+@media (max-width: 600px) {
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .botoes {
+        flex-direction: column;
+    }
+}

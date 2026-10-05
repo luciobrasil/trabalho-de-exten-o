@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguro Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🛡️ Seguro Digital</div>
+        <p>Uso seguro e consciente da internet</p>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="tela ativa">
+            <h1>Proteja-se no mundo digital</h1>
+
+            <p>
+                Aprenda de forma simples como identificar golpes,
+                proteger seus dados e navegar com mais segurança.
+            </p>
+
+            <div class="cards">
+
+                <button onclick="mostrarTela('golpes')">
+                    🚨
+                    <strong>Golpes comuns</strong>
+                    <span>Aprenda a reconhecer golpes digitais.</span>
+                </button>
+
+                <button onclick="mostrarTela('protecao')">
+                    🔐
+                    <strong>Proteja seus dados</strong>
+                    <span>Veja dicas para proteger suas informações.</span>
+                </button>
+
+                <button onclick="mostrarTela('suspeita')">
+                    🔎
+                    <strong>Mensagem suspeita</strong>
+                    <span>Descubra se uma mensagem pode ser golpe.</span>
+                </button>
+
+                <button onclick="mostrarTela('quiz')">
+                    🧠
+                    <strong>Quiz de segurança</strong>
+                    <span>Teste seus conhecimentos.</span>
+                </button>
+
+            </div>
+        </section>
+
+
+        <!-- GOLPES -->
+        <section id="golpes" class="tela">
+
+            <button class="voltar" onclick="mostrarTela('inicio')">
+                ← Voltar
+            </button>
+
+            <h1>🚨 Golpes comuns</h1>
+
+            <div class="info">
+                <h2>📱 WhatsApp falso</h2>
+                <p>
+                    O criminoso finge ser um familiar ou conhecido
+                    e pede dinheiro ou um código de confirmação.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>💳 Falso Pix</h2>
+                <p>
+                    A vítima recebe uma cobrança ou pedido de Pix
+                    falso e envia dinheiro para o criminoso.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>🏦 Falso funcionário do banco</h2>
+                <p>
+                    O criminoso liga dizendo ser funcionário do banco
+                    e tenta conseguir senhas, códigos ou transferências.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>🔗 Link malicioso</h2>
+                <p>
+                    Uma mensagem envia um link falso que pode tentar
+                    roubar senhas ou informações pessoais.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- PROTEÇÃO -->
+        <section id="protecao" class="tela">
+
+            <button class="voltar" onclick="mostrarTela('inicio')">
+                ← Voltar
+            </button>
+
+            <h1>🔐 Proteja seus dados</h1>
+
+            <div class="info">
+                <h2>🔑 Use senhas fortes</h2>
+                <p>
+                    Evite senhas óbvias como datas de nascimento,
+                    nomes ou sequências simples.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>📲 Ative a autenticação em dois fatores</h2>
+                <p>
+                    Sempre que possível, utilize uma segunda etapa
+                    de segurança para acessar suas contas.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>⚠️ Não compartilhe códigos</h2>
+                <p>
+                    Nunca informe códigos recebidos por SMS ou
+                    aplicativos para pessoas desconhecidas.
+                </p>
+            </div>
+
+            <div class="info">
+                <h2>🔎 Confira antes de clicar</h2>
+                <p>
+                    Verifique o endereço do site e desconfie de
+                    mensagens com muita urgência ou promessas.
+                </p>
+            </div>
+
+        </section>
+
+
+        <!-- MENSAGEM SUSPEITA -->
+        <section id="suspeita" class="tela">
+
+            <button class="voltar" onclick="mostrarTela('inicio')">
+                ← Voltar
+            </button>
+
+            <h1>🔎 Mensagem suspeita</h1>
+
+            <div class="mensagem">
+                <p><strong>Banco Digital:</strong></p>
+
+                <p>
+                    "Sua conta será bloqueada hoje!
+                    Clique imediatamente no link abaixo
+                    para confirmar seus dados."
+                </p>
+
+                <p class="link-falso">
+                    www.banco-seguranca-exemplo.com
+                </p>
+            </div>
+
+            <h2>Essa mensagem parece um golpe?</h2>
+
+            <div class="botoes">
+                <button onclick="respostaSuspeita(true)">
+                    🚨 Sim
+                </button>
+
+                <button onclick="respostaSuspeita(false)">
+                    ❌ Não
+                </button>
+            </div>
+
+            <p id="resultadoSuspeita"></p>
+
+        </section>
+
+
+        <!-- QUIZ -->
+        <section id="quiz" class="tela">
+
+            <button class="voltar" onclick="mostrarTela('inicio')">
+                ← Voltar
+            </button>
+
+            <h1>🧠 Quiz de segurança</h1>
+
+            <div id="pergunta"></div>
+
+            <div id="alternativas"></div>
+
+            <p id="resultadoQuiz"></p>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto de Extensão — Tecnologia e Cidadania Digital</p>
+        <p>UNIP • Uso Seguro e Consciente da Internet</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
